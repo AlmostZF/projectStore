@@ -1,0 +1,25 @@
+<app-default-login
+  title="Login"
+  secundaryBtnText="Sign Up"
+  primaryBtnText="Login"
+  (submit)="login()"
+  (navigate)="navigate()"
+  >
+  <form [formGroup]="loginForm">
+    <app-primary-input
+    formControlName="email"
+      inputName="email"
+      type="email"
+      label="email"
+      placeholder="joão@gmail.com">
+
+    </app-primary-input>
+    <app-primary-input
+    formControlName="password"
+      inputName="password"
+      type="password"
+      label="Your password">
+
+    </app-primary-input>
+  </form>
+</app-default-login>
