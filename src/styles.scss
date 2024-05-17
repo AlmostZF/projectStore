@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+$bg-color: green;
+$div-teste-bg-color: gray;
+$input-width: 50%;
+
+
+  @mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  html{
+    font-weight: 60.5%;
+    overflow-x: hidden;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+  }
+  body{
+  width: 100vw;
+  height: 100vh;
+  }
+
