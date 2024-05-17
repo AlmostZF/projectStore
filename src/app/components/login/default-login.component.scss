@@ -1,0 +1,87 @@
+@import '../../../styles.scss';
+
+
+main {
+  @include flex-center;
+  background-color: $bg-color;
+  height: 100vh;
+  width: 100%;
+
+  .form-section {
+    @include flex-center;
+      background-color: $div-teste-bg-color;
+      align-items: center;
+      flex-direction: column;
+      width: 30rem;
+      height: 60%;
+  }
+  .btn-section{
+    @include flex-center;
+    flex-direction: column;
+    width: 30%;
+    button {
+      width: 100%;
+      height: 30px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      background: transparent;
+
+      &.btn-primary {
+        background-color: rgb(19, 255, 184);
+        color: rebeccapurple;
+      }
+      &.btn-secondary {
+        background-color: none;
+        color: rebeccapurple;
+        border: 1px solid rgb(19, 255, 184) ;
+      }
+    }
+  }
+}
+
+
+
+// /*
+// ========================
+//       BUTTON THREE
+// ========================
+// */
+// .btn-three {
+//   color: #FFF;
+//   transition: all 0.5s;
+//   position: relative;
+// }
+// .btn-three::before {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   background-color: rgba(255,255,255,0.1);
+//   transition: all 0.3s;
+// }
+// .btn-three:hover::before {
+//   opacity: 0 ;
+//   transform: scale(0.5,0.5);
+// }
+// .btn-three::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 1;
+//   opacity: 0;
+//   transition: all 0.3s;
+//   border: 1px solid rgba(255,255,255,0.5);
+//   transform: scale(1.2,1.2);
+// }
+// .btn-three:hover::after {
+//   opacity: 1;
+//   transform: scale(1,1);
+// }
