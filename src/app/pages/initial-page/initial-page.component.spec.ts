@@ -11,7 +11,7 @@ describe('InitialPageComponent', () => {
       imports: [InitialPageComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(InitialPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

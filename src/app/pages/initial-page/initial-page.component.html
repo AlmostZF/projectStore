@@ -1,1 +1,43 @@
-<p>initial-page works!</p>
+  <section>
+      <div class="container-fluid py-5 mb-5 image-header">
+          <div class="container py-5">
+              <div class="row g-5 align-items-center">
+                  <div class="col-md-12 col-lg-7">
+                      <h4 class="mb-3">100% Orgânicos</h4>
+                      <h1 class="mb-5 display-3">Frutas e vegetais orgânicos</h1>
+                  </div>
+                  <div class="col-md-12 col-lg-5">
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container" >
+        <h2>Mais vendidos</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div *ngFor="let item of listItens" class="col">
+              <div class="card" >
+                <div class="item-image">
+                  <img [src]="item.image" class="card-img-top img-fluid w-100 " alt="">
+                </div>
+                <div class="card-body card-border-custom col">
+                  <div class="col card-custom-header" >
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <span>{{item.description}} </span>
+                  </div>
+                  <div class="p-2 col card-custom-footer align-items-center">
+                    <h5>R$ {{item.unitValue}} / kg</h5>
+                    <button href="" icon class="btn btn-primary btn-custom mb-2">
+                      <i src="../../../assets/icons/bag.svg">
+                        <img class="icon" src="../../../assets/icons/bag.svg" alt="cart Icon" srcset="">
+                      </i>
+                      Comprar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+  </section>
+
+
