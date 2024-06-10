@@ -10,15 +10,23 @@
     formControlName="email"
       inputName="email"
       type="email"
-      label="email"
-      placeholder="joão@gmail.com">
+      label="Email"
+      placeholder="joão@gmail.com"
+      altIcon="emailIcon"
+      scrIcon="../../../assets/icons/email.svg"
+      >
 
     </app-primary-input>
     <app-primary-input
     formControlName="password"
       inputName="password"
       type="password"
-      label="Your password">
+      label="Your password"
+      altIcon="eyeIcon"
+      [scrIcon]="srcIcon"
+      [showPassword]="showPassword"
+      (iconClick)="togglePasswordVisibility($event)"
+      >
 
     </app-primary-input>
   </form>

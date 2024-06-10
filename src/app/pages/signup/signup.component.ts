@@ -16,10 +16,13 @@ import { UserSignUp } from '../../models/session-model';
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })
-export class SingUpComponent implements OnInit{
+export class SignUpComponent implements OnInit{
 
   signForm: any = FormGroup;
-
+  srcIcon: string = "../../../assets/icons/eye.svg";
+  srcIconConfirmPassword: string = "../../../assets/icons/eye.svg";
+  showPassword: boolean = false;
+  showConfirmPassword: boolean = false;
   constructor(
     private session: SessionService,
     private router: Router
@@ -55,5 +58,15 @@ export class SingUpComponent implements OnInit{
   ngOnInit(): void {
   }
 
+
+  togglePasswordVisibility(showPassword: boolean, tipo: number) {
+    if (tipo == 0) {
+      this.showPassword = !showPassword;
+      this.srcIcon = !showPassword ? "../../../assets/icons/eye-slash.svg" : "../../../assets/icons/eye.svg";
+    } else {
+      this.showConfirmPassword = !showPassword;
+      this.srcIcon = !showPassword ? "../../../assets/icons/eye-slash.svg" : "../../../assets/icons/eye.svg";
+    }
+  }
 
 }

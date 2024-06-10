@@ -21,6 +21,8 @@ interface UserLogin {
 export class LoginComponent implements OnInit{
 
   loginForm: FormGroup;
+  showPassword: boolean = false;
+  srcIcon: string = "../../../assets/icons/eye.svg";
 
   constructor(
     private session: SessionService,
@@ -45,6 +47,11 @@ export class LoginComponent implements OnInit{
         alert(error.error.message);
       }
     })
+  }
+
+  togglePasswordVisibility(showPassword: boolean){
+    this.showPassword = !showPassword;
+    this.srcIcon =!showPassword ? "../../../assets/icons/eye-slash.svg" : "../../../assets/icons/eye.svg";
   }
 
   navigate(){

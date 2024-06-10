@@ -10,28 +10,44 @@
       inputName="name"
       formControlName="name"
       type="text"
-      label="name"
-      placeholder="joão">
+      label="Name"
+      placeholder="joão"
+      altIcon="emailIcon"
+      scrIcon="../../../assets/icons/email.svg"
+      >
     </app-primary-input>
     <app-primary-input
       inputName="email"
       formControlName="email"
       type="email"
-      label="email"
-      placeholder="joão@gmail.com">
+      label="Email"
+      placeholder="joão@gmail.com"
+      altIcon="emailIcon"
+      scrIcon="../../../assets/icons/email.svg"
+      >
 
     </app-primary-input>
     <app-primary-input
       inputName="password"
       formControlName="password"
       type="password"
-      label="Your password">
+      label="Your password"
+      altIcon="eyeIcon"
+      [scrIcon]="srcIcon"
+      [showPassword]="showPassword"
+      (iconClick)="togglePasswordVisibility($event,0)"
+      >
     </app-primary-input>
     <app-primary-input
       inputName="confirmPassword"
       formControlName="confirmPassword"
       type="password"
-      label="Confirm password">
+      label="Confirm password"
+      altIcon="eyeIcon"
+      [scrIcon]="srcIconConfirmPassword"
+      [showPassword]="showConfirmPassword"
+      (iconClick)="togglePasswordVisibility($event, 1)"
+      >
     </app-primary-input>
   </form>
 </app-default-login>
