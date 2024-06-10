@@ -1,8 +1,14 @@
 <div class="input-wrapper">
   <label [for]="inputName">{{label}}</label>
-  <input
-  [type]="type"
-  [value]="value"
-  (input)="onInput($event)"
-  [placeholder]="placeholder"/>
+  <div class="input-group mb-3">
+    <input type="text"
+      [type]="!showPassword? type : 'text'"
+      [value]="value"
+      (input)="onInput($event)"
+      [placeholder]="placeholder"
+      class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <span class="input-group-text" id="basic-addon2" (click)="togglePasswordVisibility()">
+        <img [src]="scrIcon" [alt]="altIcon">
+      </span>
+  </div>
 </div>

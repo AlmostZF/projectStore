@@ -23,6 +23,12 @@ export class PrimaryInputComponent implements ControlValueAccessor {
   @Input() placeholder: string = "";
   @Input() inputName: string = "";
   @Input() label: string = "";
+  @Input() scrIcon: string = "";
+  @Input() scrIconChange: string = "";
+  @Input() altIcon: string = "";
+  @Output() iconClick = new EventEmitter();
+  @Input() showPassword: boolean = false;
+
   value: string = "";
 
 
@@ -33,6 +39,10 @@ export class PrimaryInputComponent implements ControlValueAccessor {
     const value = (event.target as HTMLInputElement).value;
     this.onChange(value);
     // this.onTouch();
+  }
+
+  togglePasswordVisibility(){
+    this.iconClick.emit(this.showPassword);
   }
 
   writeValue(value: any): void {
@@ -47,5 +57,7 @@ export class PrimaryInputComponent implements ControlValueAccessor {
   setDisabledState(isDisabled: boolean): void {
 
   }
+
+
 
 }
