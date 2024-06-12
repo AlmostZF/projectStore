@@ -1,0 +1,20 @@
+<div class="card card-custom" >
+  <div class="item-image">
+    <img [src]="image" class="card-img-top img-fluid w-100 " alt="">
+  </div>
+  <div class="card-body card-border-custom col">
+    <div class="col card-custom-header" >
+      <h5 class="card-title">{{name}}</h5>
+      <span>{{description}} </span>
+    </div>
+    <div class="p-2 col card-custom-footer align-items-center">
+      <h5>R$ {{unitValue}} / kg</h5>
+      <app-btn-primary
+        label="Comprar"
+        src="../../../assets/icons/bag.svg"
+        alt="cart Icon"
+        [hasIcon]="true">
+      </app-btn-primary>
+    </div>
+  </div>
+</div>

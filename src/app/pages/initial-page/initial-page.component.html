@@ -12,32 +12,51 @@
           </div>
       </div>
       <div class="container" >
-        <h2>Mais vendidos</h2>
+        <h2>Produtos organicos</h2>
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div *ngFor="let item of listItens" class="col">
-              <div class="card" >
-                <div class="item-image">
-                  <img [src]="item.image" class="card-img-top img-fluid w-100 " alt="">
-                </div>
-                <div class="card-body card-border-custom col">
-                  <div class="col card-custom-header" >
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <span>{{item.description}} </span>
+              <app-cards
+              [description]="item.description"
+              [image]="item.image"
+              [name]="item.name"
+              [unitValue]="item.unitValue"
+              ></app-cards>
+            </div>
+        </div>
+      </div>
+      <div class="container pt-4">
+        <div class="title">
+          <h2>Produtos Mais Vendidos</h2>
+          </div>
+          <div class="subtitle">
+            <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem vitae delectus alias excepturi dignissimos reprehenderit</span>
+          </div>
+        <div class="row row-cols-2 row-cols-md-3 g-3">
+            <div *ngFor="let item of listItens, let i = index" class="col">
+              <div class="card mb-3 card-horizontal" >
+                <div style="display: flex; flex-direction: row;">
+                  <div>
+                    <img src="../../assets/images/best-product-2.jpg" class="custom-image-radius" alt="...">
                   </div>
-                  <div class="p-2 col card-custom-footer align-items-center">
-                    <h5>R$ {{item.unitValue}} / kg</h5>
-                    <button href="" icon class="btn btn-primary btn-custom mb-2">
-                      <i src="../../../assets/icons/bag.svg">
-                        <img class="icon" src="../../../assets/icons/bag.svg" alt="cart Icon" srcset="">
-                      </i>
-                      Comprar
-                    </button>
+                  <div>
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                        <ng-container *ngFor="let star of getStars(item.vote)">
+                          <i class="bi text-primary" [ngClass]="star"></i>
+                        </ng-container>
+                        <h5>R$ {{item.unitValue}}</h5>
+                      <app-btn-primary class="btn-custom"
+                        label="Comprar"
+                        src="../../../assets/icons/bag.svg"
+                        alt="cart Icon"
+                        [hasIcon]="true">
+                      </app-btn-primary>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
         </div>
       </div>
+    <app-footer></app-footer>
   </section>
-
-

@@ -1,0 +1,8 @@
+<button href="" icon class="btn btn-primary btn-custom mb-2" (click)="actionButton()">
+  @if(hasIcon){
+    <i>
+      <img class="icon" [src]="icon" [alt]="alt">
+    </i>
+  }
+  {{label}}
+</button>

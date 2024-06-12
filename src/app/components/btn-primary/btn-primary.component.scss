@@ -1,0 +1,31 @@
+
+@import '../../../styles.scss';
+
+.btn-custom{
+  // width: 10rem;
+  background-color: transparent;
+  border-color: #ffb524;
+  color: #81c408;
+  border-radius: 50px ;
+  @include roboto-medium;
+  &:active{
+    background-color: #ffb524 !important;
+    border-color: #9bca42 !important;
+    box-shadow: 0 0 1rem 0.2rem #d8ff908f;
+    color: white;
+  }
+  // &:focus{
+  //   background-color: #ffb524;
+  //   border-color: #81c408 !important;
+  //   color: white;
+  // }
+  &:hover{
+    background-color: #ffb524;
+    border-color: #ffb524;
+    color: white;
+  }
+}
+
+.icon{
+  padding: 0 5px 5px 0 ;
+}

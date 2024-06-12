@@ -3,7 +3,7 @@
 
 section {
 
-  height: 100vh;
+  height: 100%;
   width: 100%;
 
   .image-header {
@@ -26,101 +26,27 @@ section {
     color: #81c408;
   }
 
-  .card-img-top{
-    width: 100%;
-    height: auto; // Ajusta a altura automaticamente para manter a proporção da imagem
-    width: 100%;
-    height: auto;
-    object-fit: scale-down;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px 100px 0 0;
-      img {
-        width: 100%;
-        height: auto; // Ajusta a altura automaticamente para manter a proporção da imagem
-        object-fit: cover; // Garante que a imagem cubra todo o espaço sem distorção
-        border-radius: 10px 100px 0 0; // Aplica bordas arredondadas no topo
-      }
+  .card-horizontal{
+    width: 400px;
+    background-color: #f4f6f8;
+    border-color: #f4f6f8;
+
+    .custom-image-radius{
+      border-radius: 50%;
+      width: 12rem;
+      padding: 1rem;
     }
-
-  .card{
-    width: 19rem;
-    height: 27rem;
-    border: none;
-    transition:all 0.1s ease-in-out 0s;
-    border-radius: 10px 10px 10px 10px;
-
-    &:hover{
-      box-shadow: 0 0 55px rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(7px);
-    }
-
-    .item-image{
-        overflow: hidden;
-        transition: 0.5s;
-        border-radius: 10px 10px 0 0;
-
-      img{
-        transition: 0.5s;
-
-        &:hover{
-          transform: scale(1.3);
-        }
-      }
-    }
-
-    .card-custom-header{
-       height: 7rem;
-    }
-    .card-custom-footer{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      text-align: center;
-    }
-
   }
 
-  .card-border-custom{
-    border-left: 2px solid #ffb524;
-    border-right: 2px solid #ffb524;
-    border-bottom: 2px solid #ffb524;
-    border-radius: 0px 0px 10px 10px;
-    text-align: center;
-     height: 12rem;
+  .text-primary{
+    color: #81c408 !important;
   }
-
   .btn-custom{
-    // width: 10rem;
-    background-color: white;
-    border-color: #ffb524;
-    color: #81c408;
-    border-radius: 50px ;
-
-    &:active{
-      background-color: #ffb524 !important;
-      border-color: #9bca42 !important;
-      box-shadow: 0 0 1rem 0.2rem #d8ff908f;
-      color: white;
-    }
-    // &:focus{
-    //   background-color: #ffb524;
-    //   border-color: #81c408 !important;
-    //   color: white;
-    // }
-    &:hover{
-      background-color: #ffb524;
-      color: white;
-    }
-  }
-
-  .icon{
-    padding: 0 5px 5px 0 ;
+    background-color: #f4f6f8 !important;
   }
 
   h2{
-    @include roboto-medium;
+    @include roboto-bold;
     color: #45595b;
   }
   span{
@@ -130,5 +56,11 @@ section {
   h5{
     @include roboto-medium;
     color: #45595b;
+  }
+  .title{
+    @include flex-center;
+  }
+  .subtitle{
+    @include flex-center;
   }
 }

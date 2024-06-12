@@ -6,11 +6,13 @@ export interface Itens {
   totalValue: number;
   name: string;
   image: string;
+  vote: number;
 }
 
 export const mockItens: Itens[] = [
   {
     quantity: 10,
+    vote: 1.4,
     unitValue: 15.50,
     type: "Electronics",
     description: "High-quality wireless mouse Noise-cancelling",
@@ -20,6 +22,7 @@ export const mockItens: Itens[] = [
   },
   {
     quantity: 5,
+    vote: 2.5,
     unitValue: 20.10,
     type: "Electronics",
     description: "Noise-cancelling Noise-cancelling",
@@ -29,6 +32,7 @@ export const mockItens: Itens[] = [
   },
   {
     quantity: 3,
+    vote: 5,
     unitValue: 45.00,
     type: "Appliances",
     description: "High-efficiency Noise-cancelling",
@@ -38,6 +42,7 @@ export const mockItens: Itens[] = [
   },
   {
     quantity: 20,
+    vote: 4,
     unitValue: 8.00,
     type: "Books",
     description: "Bestselling mystery novel Noise-cancelling",
@@ -48,6 +53,7 @@ export const mockItens: Itens[] = [
   {
     quantity: 7,
     unitValue: 30.00,
+    vote: 4,
     type: "Kitchenware",
     description: "Stainless steel cooking pot Noise-cancelling",
     totalValue: 210.00,
@@ -57,6 +63,7 @@ export const mockItens: Itens[] = [
   {
     quantity: 5,
     unitValue: 20.00,
+    vote: 4,
     type: "Electronics",
     description: "Noise-cancelling Noise-cancelling",
     totalValue: 1000.00,
@@ -66,6 +73,7 @@ export const mockItens: Itens[] = [
   {
     quantity: 3,
     unitValue: 45.00,
+    vote: 4,
     type: "Appliances",
     description: "High-efficiency Noise-cancelling",
     totalValue: 1350.00,
@@ -74,6 +82,7 @@ export const mockItens: Itens[] = [
   },
   {
     quantity: 20,
+    vote: 4,
     unitValue: 8.00,
     type: "Books",
     description: "Bestselling mystery novel Noise-cancelling",
