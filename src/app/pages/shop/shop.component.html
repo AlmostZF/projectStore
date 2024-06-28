@@ -1,0 +1,90 @@
+<div class="container-fluid py-4 mb-4 pb-5 image-header">
+  <div class="container py-4">
+      <div class="align-items-center">
+          <div class="col-md-12" style="display: flex;align-items: center; justify-content: center;">
+              <h4 class="mb-3">Shop</h4>
+          </div>
+      </div>
+  </div>
+</div>
+<div class="container pt-5">
+  <div style="display: flex; align-items: center; justify-content: space-around;">
+    <div class="col-md-3">
+      <div class="search">
+        <h2>Buscar</h2>
+        <div class="input-group mb-3" style="padding-bottom: 2rem;">
+          <input type="text" class="form-control" [(ngModel)]="seachTerm"
+          placeholder="Pesquisar" aria-label="Pesquisar" aria-describedby="basic-addon2">
+          <span class="input-group-text" id="basic-addon2"><i class="bi bi-search" (click)="verify()"></i></span>
+        </div>
+      </div>
+      <div class="categories" style="padding-bottom: 2rem;">
+        <h2>Categorias</h2>
+        <ul>
+          <li>Frutas</li>
+          <li>Legumes</li>
+          <li>Verduras</li>
+          <li>Grãos</li>
+          <li>Outros</li>
+        </ul>
+      </div>
+      <div class="preco"style="padding-bottom: 2rem;">
+        <h2>Preço</h2>
+        <input type="range" class="form-range" id="customRange1" style="width: 80%;">
+      </div>
+      <div class="addicional" style="padding-bottom: 2rem;">
+        <h2>Adicionais</h2>
+        <ng-container *ngFor="let item of findTerms">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+              name="category" [value]="item"
+              [(ngModel)]="selectedType" (click)="verify()" >
+            <label class="form-check-label" for="flexRadioDefault1">
+              {{item.name}}
+            </label>
+          </div>
+        </ng-container>
+      </div>
+      <div class="avalicoes" style="padding-bottom: 2rem;">
+        <h2>Avaliações</h2>
+        <ng-container *ngFor="let stars of listStarts; let i = index" >
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+            name="category" [value]="stars" (click)="verify(stars)">
+          <label class="form-check-label" for="flexRadioDefault1">
+            <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let j = index">
+              <i [ngClass]="j < stars ? 'bi bi-star-fill text-primary' : 'bi bi-star text-primary'"></i>
+            </ng-container>
+          </label>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="col-md-9" >
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let item of listItens" class="col">
+          <ng-container *ngIf="loading == false">
+            <app-cards
+            [description]="item.description"
+            [image]="item.image"
+            [name]="item.nameProduct"
+            [unitValue]="item.unitValue"
+            [loading]="loading"
+            ></app-cards>
+          </ng-container>
+        </div>
+        <div *ngFor="let item of listplaceHolder" class="col">
+          <ng-container *ngIf="loading == true">
+            <div class="placeholder-glow" style="width: 20rem; height: 27rem" aria-hidden="true">
+              <div class="placeholder " style="width: 19rem; height: 100%; border-radius: 10px 100px 10px 10px;"></div>
+            </div>
+          </ng-container>
+        </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+<div class="pt-4">
+  <app-footer></app-footer>
+</div>

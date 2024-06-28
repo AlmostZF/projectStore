@@ -5,11 +5,13 @@ import { LoginComponent } from './pages/login/login.component';
 import { InitialPageComponent } from './pages/initial-page/initial-page.component';
 import { SignUpComponent } from './pages/signup/signup.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ShopComponent } from './pages/shop/shop.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, InitialPageComponent,LoginComponent,SignUpComponent,HeaderComponent ],
+  imports: [RouterOutlet, InitialPageComponent, LoginComponent, SignUpComponent, HeaderComponent, ShopComponent,FooterComponent,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

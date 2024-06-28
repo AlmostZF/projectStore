@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Itens } from '../../models/itens-model';
-import { mockItens } from '../../models/itens-model';
+import { Products, mockProducts } from '../../models/products-model';
 import { CommonModule } from '@angular/common';
 import { BtnPrimaryComponent } from '../../components/btn-primary/btn-primary.component';
-import { get } from 'node:http';
 import { CardsComponent } from '../../components/cards/cards.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { ProductsService } from '../../service/products.service';
 
 @Component({
   selector: 'app-initial-page',
@@ -16,8 +15,9 @@ import { FooterComponent } from '../../components/footer/footer.component';
 })
 export class InitialPageComponent implements OnInit{
 
-  listItens: Itens[] = mockItens;
-  constructor() { }
+  listProducts: Products[] = mockProducts;
+
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit() {
   }

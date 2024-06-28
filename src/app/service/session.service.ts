@@ -10,7 +10,7 @@ import { LoginResponse, UserLogin, UserSignUp } from '../models/session-model';
 export class SessionService {
   baseUrl = environment.baseUrl;
 
-  constructor( private http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   login(user: UserLogin): Observable<LoginResponse>{

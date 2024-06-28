@@ -4,12 +4,14 @@ import { InitialPageComponent } from './pages/initial-page/initial-page.componen
 import { SignUpComponent } from './pages/signup/signup.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ShopComponent } from './pages/shop/shop.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: '', component: HeaderComponent,
     children: [
       {path: 'home', component: InitialPageComponent},
+      {path: 'shop', component: ShopComponent},
     ]
   },
   {path: 'footer', component: FooterComponent},

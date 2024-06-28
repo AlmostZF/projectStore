@@ -1,0 +1,14 @@
+@import "../../../styles.scss";
+.image-header {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(131, 100, 70, 0)), url(../../../assets/images/fruits2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h4 {
+  color: white;
+  @include roboto-bold;
+}
+
+
